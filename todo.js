@@ -23,14 +23,18 @@ new Vue({
       }
 
       if (!isNaN(this.editNumber)) {
-        this.todos[this.editNumber] = this.newTodo
-        this.editNumber = 'editNumber'
+        this.updateTodo()
       }
       else {
         this.todos.push(this.newTodo)
       }
       this.newTodo = ''
       this.saveTodo()
+    },
+
+    updateTodo() {
+      this.todos[this.editNumber] = this.newTodo
+      this.editNumber = 'editNumber'
     },
 
     removeTodo(i) {
