@@ -16,7 +16,7 @@
         <div class="d-flex flex-row align-items-center">
           <input v-model="newTodo" id="target" type="text" class="form-control form-control-lg me-3 border-0" id="exampleFormControlInput1" placeholder="Add new...">
           <div>
-            <button @click="addTodo" type="button" class="btn btn-primary">Add</button>
+            <button @click="() => (!isNaN(editNumber) ? updateTodo() : addTodo())" type="button" class="btn btn-primary">Add</button>
           </div>
         </div>
       </div>
